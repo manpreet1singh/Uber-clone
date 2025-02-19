@@ -14,6 +14,12 @@ if(!errors.isEmpty()){
 }
 console.log(req.body)
 const {fullname,email,password}=req.body;
+const isUserAlreadyRegistered=await userModel.findOne({
+    email
+});
+if(isUserAlreadyRegistered){
+    return res.status(400).json({message:'User already registered'})
+}
 const hashedPassword=await userModel.hashPassword(password);
 //console.log(hashedPassword)
 console.log(fullname.firstname)

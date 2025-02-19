@@ -6,6 +6,7 @@ const cokkieParser=require('cookie-parser')
 const app=express()
 const connectionToDb=require('./db/db')
 const userRoutes=require('./routes/user.routes')
+const captainRoutes=require('./routes/captain.routes')
 connectionToDb()
 
 app.use(cokkieParser())
@@ -17,5 +18,6 @@ app.use(express.urlencoded({extended:true}));
 app.get('/',(req,res)=>{
     res.send('Hello world')
 })
+app.use('/captain',captainRoutes)
 app.use('/users',userRoutes)
 module.exports =app
