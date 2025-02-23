@@ -42,7 +42,7 @@ const UserLogin = () => {
         <p className='text-center' >New here?<Link to='/signup' className='text-blue-600' > Create new account</Link></p> 
         </div>
         <div> 
-            <Link  to='/captain-signup' className='bg-[#10b461] flex justify-center items-center text-white font-semibold mb-7 rounded px-4 w-full text-lg placeholder:text-base'> Sign in as Captain</Link>
+            <Link  to='/captain-login' className='bg-[#10b461] flex justify-center items-center text-white font-semibold mb-5 rounded px-4 w-full text-lg placeholder:text-base'> Sign in as Captain</Link>
            
         </div>
 
