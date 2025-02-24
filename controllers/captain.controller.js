@@ -9,7 +9,7 @@ module.exports.registerCaptain = async (req, res) => {
         console.log("Validation Errors:", errors.array()); // Debugging
         return res.status(400).json({errors: errors.array()})
     }
-    console.log(req.body)
+    // console.log(req.body)
     const {fullname, email, password,vehicle} = req.body;
     const iscaptainAlreadyRegistered = await captainModel.findOne
     ({email});
